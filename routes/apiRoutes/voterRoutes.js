@@ -38,6 +38,7 @@ router.get('/voter/:id', (req, res) => {
 });
 
 router.post('/voter', ({ body }, res) => {
+    console.log(body);
     const errors = inputCheck(body, 'first_name', 'last_name', 'email');
 
     if (errors) {
